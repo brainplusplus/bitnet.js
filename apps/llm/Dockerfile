@@ -32,7 +32,7 @@ RUN cmake -B build -DBITNET_X86_TL2=ON -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMP
 ADD https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-8B-Instruct-Q6_K_L.gguf .
 
 # Verify the integrity of the model file
-RUN echo "9bf5598b3cc6c5804c520aa6349266d2e2c9a22402e157bd9b187dc34806dad6 Meta-Llama-3.1-8B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-8B-Instruct-Q6_K_L.gguf" | sha256sum -c
+RUN echo "9bf5598b3cc6c5804c520aa6349266d2e2c9a22402e157bd9b187dc34806dad6 Meta-Llama-3.1-8B-Instruct-Q6_K_L.gguf" | sha256sum -c
 
 # Expose port for communication with the Node.js app
 EXPOSE 5000
