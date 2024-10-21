@@ -18,7 +18,7 @@ def handle_socket_query(data):
     def run_model():
         # Run the Llama inference model with the query
         process = subprocess.Popen(
-            ['python3', 'run_inference.py', '-m', 'Llama3-8B-1.58-100B-tokens-TQ2_0.gguf', '-p', query],
+            ['python3', 'run_inference.py', '-m', 'Meta-Llama-3.1-8B-Instruct-Q6_K_L.gguf', '-p', query],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
